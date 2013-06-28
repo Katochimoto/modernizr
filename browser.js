@@ -75,4 +75,13 @@
         return false;
     });
 
+    /**
+     * Detects whether or not the current browser is IE8 in compatibility mode (i.e. acting as IE7).
+     */
+    Modernizr.addTest('ie8compat', function() {
+        return !window.addEventListener
+            && !!document.documentMode
+            && document.documentMode === 7;
+    });
+
 })(Modernizr);
